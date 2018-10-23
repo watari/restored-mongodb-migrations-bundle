@@ -1,0 +1,53 @@
+{
+    "name": "doesntmattr/mongodb-migrations-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony MongoDBMigrationsBundle",
+    "keywords": ["doesntmattr", "antimattr", "database", "doctrine", "migration", "mongodb", "symfony"],
+    "homepage": "http://github.com/doesntmattr/mongodb-migrations-bundle",
+    "license": "MIT",
+    "authors": [
+        {"name": "Matthew Fitzgerald", "email": "matthewfitz@gmail.com"}
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/watari/mongodb-migrations"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "conflict": {
+        "antimattr/mongodb-migrations-bundle" : "*"
+    },
+    "require": {
+        "php": "^7.1",
+        "symfony/dependency-injection": "^2.7 || ^3.3 || ^4.0",
+        "symfony/http-kernel": "^2.7 || ^3.3 || ^4.0",
+        "symfony/console": "^2.7 || ^3.3 || ^4.0",
+        "symfony/config": "^2.7 || ^3.3 || ^4.0",
+        "doesntmattr/mongodb-migrations": "dev-bundles-support",
+        "doctrine/mongodb-odm": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AntiMattr\\Bundle\\MongoDBMigrationsBundle\\": ""
+        },
+        "exclude-from-classmap": ["Tests/"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AntiMattr\\Bundle\\MongoDBMigrationsBundle\\": "Tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0.x-dev"
+        }
+    }
+}
